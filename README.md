@@ -1,2 +1,2 @@
 # design-pattern
-Coded by Alex, Enzo, Eliott & Thomas
+Coded by Alex, Enzo & Thomas
