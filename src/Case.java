@@ -2,7 +2,7 @@ public class Case {
     int etat;
     int ligne;
     int colonne;
-    char ressources;
+    String ressources;
     int quantite_ressource;
 
     public Case(int i ,int j) {
@@ -11,7 +11,9 @@ public class Case {
         colonne=j;
     }
 
-    public void Remplir_Case(char type_ressources, int total_ressource){
+
+
+    public void Remplir_Case(String type_ressources, int total_ressource){
         ressources= type_ressources;
         quantite_ressource = total_ressource;
     }
