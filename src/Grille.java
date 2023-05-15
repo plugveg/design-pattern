@@ -6,6 +6,7 @@ import java.util.List;
 public class Grille extends JPanel {
         Case[][] LesCases;
         List<String> LesRessources = new ArrayList<String>();
+        List<String> LesOutils = new ArrayList<String>();
 
 
 
@@ -23,6 +24,11 @@ public class Grille extends JPanel {
             LesRessources.add("Wood");
             LesRessources.add("Food");
 
+            //Creation d'une liste d'outil contenant "Hache","Pioche","Houe"
+            LesOutils.add("Hache");
+            LesOutils.add("Pioche");
+            LesOutils.add("Houe");
+
 
             for (int i=0; i<N ; i++ ){
                 for (int j=0; j<N ; j++){
@@ -37,6 +43,29 @@ public class Grille extends JPanel {
             }
 
         }
+        //Creation d'un inventaire de ressource
+        public HashMap<String,Integer> Inventaire(int nbr_de_depart, List<String> LesRessources){
+
+            HashMap<String,Integer> Inventaire = new HashMap<String,Integer>();
+
+            for (String Ressource : LesRessources){
+                Inventaire.put(Ressource,nbr_de_depart);
+            }
+            return Inventaire;
+        }
+
+        //Creation d'un inventaire d'outil
+        public HashMap<String,Integer> InventaireOutil(int nbr_de_depart, List<String> LesOutils){
+
+            HashMap<String,Integer> InventaireOutil = new HashMap<String,Integer>();
+
+            for (String Outil : LesOutils){
+                InventaireOutil.put(Outil,nbr_de_depart);
+            }
+            return InventaireOutil;
+        }
+
+
 
         public void AfficherGrille(int N){
             for (int i=0; i<N ; i++ ){
