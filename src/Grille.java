@@ -9,7 +9,16 @@ public class Grille extends JPanel {
         List<String> LesOutils = new ArrayList<String>();
 
 
+        //Creation d'un inventaire
+        public HashMap<String,Integer> Inventaire(int nbr_de_depart, List<String> LesRessources){
 
+            HashMap<String,Integer> Inventaire = new HashMap<String,Integer>();
+
+            for (String Ressource : LesRessources){
+                Inventaire.put(Ressource,nbr_de_depart);
+            }
+            return Inventaire;
+        }
 
 
 
@@ -29,6 +38,13 @@ public class Grille extends JPanel {
             LesOutils.add("Pioche");
             LesOutils.add("Houe");
 
+            //Creation Inventaire de depart
+            HashMap<String,Integer> InventaireRessource = Inventaire(10,LesRessources);
+            HashMap<String,Integer> InventaireOutil = Inventaire(10,LesOutils);
+            //Affichage de l'inventaire
+            System.out.println(InventaireRessource);
+            System.out.println(InventaireOutil);
+
 
             for (int i=0; i<N ; i++ ){
                 for (int j=0; j<N ; j++){
@@ -43,29 +59,6 @@ public class Grille extends JPanel {
             }
 
         }
-        //Creation d'un inventaire de ressource
-        public HashMap<String,Integer> Inventaire(int nbr_de_depart, List<String> LesRessources){
-
-            HashMap<String,Integer> Inventaire = new HashMap<String,Integer>();
-
-            for (String Ressource : LesRessources){
-                Inventaire.put(Ressource,nbr_de_depart);
-            }
-            return Inventaire;
-        }
-
-        //Creation d'un inventaire d'outil
-        public HashMap<String,Integer> InventaireOutil(int nbr_de_depart, List<String> LesOutils){
-
-            HashMap<String,Integer> InventaireOutil = new HashMap<String,Integer>();
-
-            for (String Outil : LesOutils){
-                InventaireOutil.put(Outil,nbr_de_depart);
-            }
-            return InventaireOutil;
-        }
-
-
 
         public void AfficherGrille(int N){
             for (int i=0; i<N ; i++ ){
