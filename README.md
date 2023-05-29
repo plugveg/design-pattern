@@ -2,7 +2,9 @@
 Coded by Alex, Enzo & Thomas
 
 Unités et Outils => Thomas
+
 Simulation (plateau) => Alexandre
+
 Ressources / Batiments => Enzo
 
 ## Link :
