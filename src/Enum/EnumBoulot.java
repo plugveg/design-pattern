@@ -1,9 +1,11 @@
+package Enum;
+
 import java.util.Arrays;
 
 public enum EnumBoulot {
     FERMIER(EnumRessources.MIAM),
     BUCHERON(EnumRessources.BOIS),
-    MINEUR(EnumRessources.OR,EnumRessources.PIERRE);
+    MINEUR(EnumRessources.OR, EnumRessources.PIERRE);
 
     private final EnumRessources[] enumRessources;
 

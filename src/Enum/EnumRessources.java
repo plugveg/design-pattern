@@ -1,3 +1,5 @@
+package Enum;
+
 public enum EnumRessources {
     BOIS(10, "leBois"),
     PIERRE(10, "laPierre"),

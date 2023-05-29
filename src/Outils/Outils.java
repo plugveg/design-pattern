@@ -1,3 +1,6 @@
+package Outils;
+import Enum.*;
+
 public class Outils {
     private int niveau;
     private EnumBoulot type;
