@@ -17,6 +17,24 @@ public class UnitesSimples extends UnitesGeneraux{
         this.setCout(1);
     }
 
+    public void boulot() {
+        Inventaire inventaire = Inventaire.getInstance();
+        int faim = this.estCeQueExpert() ? this.getCout()*2 : this.getCout();
+        if (!inventaire.possedeRessource(EnumRessources.MIAM,faim)){
+            System.out.println(nom + " n'a pas assez de nourriture pour travailler");
+            estCeQueExpert();
+            return;
+        }
+        System.out.print(nom + "(" + this.getPosition().getX() + "," + this.getPosition().getY() + ") :");
+        if(this.getPosition().consomerRessource(this.getOutil(),this.estCeQueExpert())){
+            monteeDeNiveau();
+        }
+        else {
+            estCeQueExpert();
+        }
+
+    }
+
     public boolean estCeQueExpert(){
         return this.expert;
     }
