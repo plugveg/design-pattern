@@ -13,7 +13,10 @@ public class Batiment {
         this.requiredResources = requiredResources;
     }
 
-    
+    public Batiment(String name, TypeBatiment batimentType) {
+        this.name = name;
+        this.batimentType = batimentType;
+    }
 
     public String getName() {
         return name;
@@ -27,5 +30,15 @@ public class Batiment {
         return requiredResources;
     }
 
+    public boolean canBeBuilt(HashMap<TypeRessource, Integer> inventory) {
+        for (Ressource requiredResource : requiredResources) {
+            if (!inventory.containsKey(requiredResource.getType()) || inventory.get(requiredResource.getType()) < requiredResource.getQuantity()) {
+                return false;
+            }
+        }
+        return true;
+    }
 
+    public void DoAction(HashMap<TypeRessource, Integer> inventory) {
+    }
 }
