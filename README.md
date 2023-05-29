@@ -1,6 +1,9 @@
 # design-pattern
 Coded by Alex, Enzo & Thomas
 
+Unités et Outils => Thomas
+Simulation (plateau) => Alexandre
+Ressources / Batiments => Enzo
 
 ## Link :
 * [Open Close Principle (OCP)](https://en.wikipedia.org/wiki/Open%E2%80%93closed_principle)
