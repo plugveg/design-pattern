@@ -1,7 +1,7 @@
 # design-pattern
 Coded by Alex, Enzo & Thomas
 
-Unités et Outils => Thomas
+Unités et Outils.Outils => Thomas
 
 Simulation (plateau) => Alexandre
 
